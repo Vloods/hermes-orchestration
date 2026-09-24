@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+<title id="title">Hermes Orchestration mark</title><desc id="desc">Four orange task nodes connected within an ivory technical grid on black.</desc>
+<rect width="320" height="320" fill="#121416"/>
+<g stroke="#5c5851" fill="none"><path d="M24 24H296V296H24Z M24 88H296M24 232H296M88 24V296M232 24V296"/></g>
+<g stroke="#f16933" stroke-width="8" fill="none" stroke-linejoin="miter"><path d="M104 120H160V160H216M160 160V216H104"/></g>
+<g fill="#f16933"><rect x="88" y="104" width="32" height="32"/><rect x="200" y="144" width="32" height="32"/><rect x="88" y="200" width="32" height="32"/></g>
+<g fill="#f1ece2" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" letter-spacing="2"><text x="98" y="274">H / O</text></g>
+</svg>

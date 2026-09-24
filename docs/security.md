@@ -1,0 +1,13 @@
+# Security and parity
+
+This is a **template renderer**, not a secrets importer or a Hermes installer. It never reads your live `~/.hermes` or `.env`; the operator supplies absolute destination paths. Dry-run is the default and prints intended files. `--apply` creates minimal YAML under the chosen home, mode 0600. Existing destinations fail before any write. To replace them you must also pass `--backup-existing`; it copies each original to a unique `.backup[.N]` first. This is a **replacement, not a YAML merge**; preserve provider, plugin, gateway, and personal settings separately. Prefer a fresh isolated home. There is no transactional multi-file rollback on disk-full or permissions failure.
+
+The renderer rejects symlink components and YAML-special token characters in supplied model/provider IDs. It does not sandbox the Hermes runtime, which runs with your user permissions and can invoke tools or network calls. A malicious repository or card body may still be untrusted input to a model. Review project policies and worker workspaces, use minimal permissions, and verify outputs before publication. Avoid posting tokens, local paths, private data, memories, or exported profiles to a public repo.
+
+## Approval policy
+
+`delegation.subagent_auto_approve: false` auto-denies dangerous-command approval requests in unattended subagents; it does not guarantee that every command is harmless or forbid all non-command side effects. The local reference setup had `true`, but this starter intentionally differs. **Parity opt-in:** after reviewing the impact and threat model, change that key to `true` in the intended home's `config.yaml` only; it broadens unattended dangerous-command approval. Do not use `--yolo`, `--accept-hooks`, or a global permissive approval mode merely to make a demo run. Explicit user approval and a throwaway home/workspace are safer.
+
+## Auth and publication
+
+Use `HERMES_HOME="$SANDBOX" hermes setup` against the chosen home. Do not paste keys into YAML or check in `.env`. The template has no hardcoded `base_url` or `model.api_mode`; provider setup and wire-protocol resolution are upstream-owned. A named profile's missing provider credentials can fall back to its root home's `auth.json` in the observed runtime; separate profile configuration is not a credential isolation guarantee. For a separate account, configure profile credentials deliberately and verify the effective provider before dispatch. A local `git` commit, passing unit test, or completed local-only Kanban card is not a published/CI-accepted pull request. Use appropriate completion contracts for real PR tasks; see the upstream Kanban docs. No GitHub write is required by this starter.

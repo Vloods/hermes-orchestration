@@ -1,0 +1,31 @@
+# Starter values, not a complete export of a personal Hermes home.
+# Authenticate through the official Hermes setup flow; never put secrets here.
+model:
+  provider: "{{PROVIDER}}"
+  default: "{{PRIMARY_MODEL}}"
+agent:
+  reasoning_effort: low
+delegation:
+  provider: "{{PROVIDER}}"
+  model: "{{DELEGATE_MODEL}}"
+  reasoning_effort: medium
+  max_concurrent_children: 3
+  max_spawn_depth: 1
+  orchestrator_enabled: false
+  subagent_auto_approve: false
+auxiliary:
+  vision: {provider: "{{PROVIDER}}", model: "{{AUX_MODEL}}", reasoning_effort: low}
+  compression: {provider: "{{PROVIDER}}", model: "{{AUX_MODEL}}", reasoning_effort: low}
+  skills_hub: {provider: "{{PROVIDER}}", model: "{{AUX_MODEL}}", reasoning_effort: low}
+  approval: {provider: "{{PROVIDER}}", model: "{{AUX_MODEL}}", reasoning_effort: low}
+  mcp: {provider: "{{PROVIDER}}", model: "{{AUX_MODEL}}", reasoning_effort: low}
+  title_generation: {provider: "{{PROVIDER}}", model: "{{AUX_MODEL}}", reasoning_effort: low}
+  triage_specifier: {provider: "{{PROVIDER}}", model: "{{AUX_MODEL}}", reasoning_effort: low}
+  kanban_decomposer: {provider: "{{PROVIDER}}", model: "{{AUX_MODEL}}", reasoning_effort: low}
+  profile_describer: {provider: "{{PROVIDER}}", model: "{{AUX_MODEL}}", reasoning_effort: low}
+  curator: {provider: "{{PROVIDER}}", model: "{{AUX_MODEL}}", reasoning_effort: low}
+kanban:
+  dispatch_in_gateway: true
+  auto_decompose: false # opt in after configuring models and profile routing
+  orchestrator_profile: ""
+  default_assignee: ""

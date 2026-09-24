@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 390" role="img" aria-labelledby="title desc">
+<title id="title">Hermes orchestration architecture</title><desc id="desc">A supervisor routes short tasks to delegated children and durable work to the Kanban gateway, with a separate solver profile for difficult review.</desc>
+<rect width="1080" height="390" fill="#f3efe5"/>
+<g stroke="#c3bcb0" fill="none"><path d="M24 24H1056V366H24Z"/><path d="M24 70H1056M24 322H1056"/></g>
+<g font-family="Arial, Helvetica, sans-serif" fill="#171819"><text x="48" y="54" font-size="19" font-weight="700" letter-spacing="2">THE ROUTING MODEL</text><text x="48" y="348" font-size="13" letter-spacing="1.3">SHORT-LIVED CALLS ARE NOT DURABLE QUEUES  ·  VERIFY BOTH BEFORE DELIVERY</text></g>
+<g fill="#171819"><rect x="44" y="118" width="230" height="152"/><rect x="420" y="94" width="255" height="73"/><rect x="420" y="219" width="255" height="73"/><rect x="826" y="94" width="218" height="73"/><rect x="826" y="219" width="218" height="73"/></g>
+<g fill="#f3efe5" font-family="Arial, Helvetica, sans-serif"><text x="63" y="160" font-size="24" font-weight="700">SUPERVISOR</text><text x="63" y="186" font-size="13">astra · low</text><text x="63" y="239" font-size="13">owns final decision</text><text x="439" y="126" font-size="19" font-weight="700">DELEGATE</text><text x="439" y="148" font-size="12">sol · medium · depth 1</text><text x="439" y="250" font-size="19" font-weight="700">KANBAN BOARD</text><text x="439" y="275" font-size="12">durable tasks · explicit assignee</text><text x="845" y="126" font-size="19" font-weight="700">RETURN</text><text x="845" y="148" font-size="12">short-lived result</text><text x="845" y="250" font-size="19" font-weight="700">GATEWAY</text><text x="845" y="275" font-size="12">dispatcher → named profile</text></g>
+<g stroke="#ed6833" stroke-width="3" fill="none"><path d="M274 148H407"/><path d="M274 247H407"/><path d="M675 130H813"/><path d="M675 255H813"/></g>
+<g fill="#ed6833"><path d="m407 148-12-7v14zM407 247l-12-7v14zM813 130l-12-7v14zM813 255l-12-7v14z"/></g>
+<g font-family="Arial, Helvetica, sans-serif" fill="#171819" font-size="11" letter-spacing="1"><text x="290" y="134">FORK / JOIN</text><text x="290" y="232">HANDOFF</text><text x="704" y="116">RESULT</text><text x="706" y="240">DISPATCH</text></g>
+</svg>
