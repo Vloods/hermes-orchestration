@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
-<title id="title">Hermes Orchestration — deliberate work, verified outcomes</title><desc id="desc">Editorial black and ivory banner with orange routing lines and a compact task grid.</desc>
-<rect width="1200" height="360" fill="#121416"/>
-<g stroke="#494846" stroke-width="1" opacity=".65"><path d="M40 30H1160M40 330H1160M40 30V330M1160 30V330M770 30V330"/><path d="M40 90H1160M40 270H1160"/></g>
-<g fill="#f1ece2" font-family="Arial, Helvetica, sans-serif">
-<text x="68" y="68" font-size="17" font-weight="700" letter-spacing="3">H / O</text>
-<text x="68" y="157" font-size="54" font-weight="700" letter-spacing="-2">HERMES</text>
-<text x="68" y="213" font-size="54" font-weight="700" letter-spacing="-2">ORCHESTRATION</text>
-<text x="68" y="300" font-size="16" letter-spacing="2">DELIBERATE WORK  /  VERIFIED OUTCOMES</text>
-<text x="806" y="67" font-size="13" letter-spacing="2">WORKFLOW   01 / 03</text>
-<text x="806" y="302" font-size="13" letter-spacing="1.5">SUPERVISE  →  DELEGATE  →  VERIFY</text>
+<title id="title">Hermes Orchestration — deliberate work, verified outcomes</title><desc id="desc">Industrial editorial banner. Large title on the left; a separate compact routing motif on the right.</desc>
+<rect width="1200" height="360" fill="#131719"/>
+<g stroke="#465055" stroke-width="1" fill="none"><rect x="28" y="28" width="1144" height="304"/><path d="M28 86H1172M28 272H1172M748 28V332"/></g>
+<g font-family="Arial, Helvetica, sans-serif" fill="#f2ede3">
+<text x="58" y="65" font-size="15" font-weight="700" letter-spacing="3">H / O     FIELD NOTES 001</text>
+<text x="58" y="161" font-size="53" font-weight="700" letter-spacing="-1.5">HERMES</text>
+<text x="58" y="220" font-size="49" font-weight="700" letter-spacing="-1.7">ORCHESTRATION</text>
+<text x="58" y="307" font-size="15" letter-spacing="1.8">DELIBERATE WORK  /  VERIFIED OUTCOMES</text>
+<text x="785" y="61" font-size="13" letter-spacing="2">CONTROL PLANE / 01</text>
+<text x="785" y="307" font-size="13" letter-spacing="1.4">SUPERVISE  /  ROUTE  /  VERIFY</text>
 </g>
-<g fill="none" stroke="#f16933" stroke-width="3"><path d="M822 133H922V190H1032"/><path d="M922 190V235H1080"/><path d="M922 190H831V235"/></g>
-<g fill="#f16933"><rect x="811" y="122" width="22" height="22"/><rect x="1021" y="179" width="22" height="22"/><rect x="820" y="224" width="22" height="22"/><rect x="1069" y="224" width="22" height="22"/></g>
-<g fill="#f1ece2" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1"><text x="844" y="138">ROOT</text><text x="1053" y="195">WORK</text><text x="848" y="239">CHECK</text><text x="1096" y="239">SHIP</text></g>
+<g fill="none" stroke="#f07845" stroke-width="3" stroke-linecap="square"><path d="M810 150H952V126H1060M952 150V222H1060"/><path d="M810 150V222H885"/></g>
+<g fill="#f07845"><rect x="795" y="135" width="30" height="30"/><rect x="1048" y="114" width="24" height="24"/><rect x="873" y="210" width="24" height="24"/><rect x="1048" y="210" width="24" height="24"/></g>
+<g font-family="Arial, Helvetica, sans-serif" fill="#f2ede3" font-size="12" font-weight="700" letter-spacing="1.2"><text x="789" y="192">ROOT</text><text x="1022" y="108">TASK</text><text x="849" y="254">CHECK</text><text x="1039" y="254">DONE</text></g>
 </svg>

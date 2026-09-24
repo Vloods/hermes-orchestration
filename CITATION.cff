@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this starter, please cite this repository."
+title: "Hermes Orchestration"
+authors:
+  - name: "Vloods"
+repository-code: "https://github.com/Vloods/hermes-orchestration"
+url: "https://github.com/Vloods/hermes-orchestration"
+license: MIT

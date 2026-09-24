@@ -1,11 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 390" role="img" aria-labelledby="title desc">
-<title id="title">Hermes orchestration architecture</title><desc id="desc">A supervisor routes short tasks to delegated children and durable work to the Kanban gateway, with a separate solver profile for difficult review.</desc>
-<rect width="1080" height="390" fill="#f3efe5"/>
-<g stroke="#c3bcb0" fill="none"><path d="M24 24H1056V366H24Z"/><path d="M24 70H1056M24 322H1056"/></g>
-<g font-family="Arial, Helvetica, sans-serif" fill="#171819"><text x="48" y="54" font-size="19" font-weight="700" letter-spacing="2">THE ROUTING MODEL</text><text x="48" y="348" font-size="13" letter-spacing="1.3">SHORT-LIVED CALLS ARE NOT DURABLE QUEUES  ·  VERIFY BOTH BEFORE DELIVERY</text></g>
-<g fill="#171819"><rect x="44" y="118" width="230" height="152"/><rect x="420" y="94" width="255" height="73"/><rect x="420" y="219" width="255" height="73"/><rect x="826" y="94" width="218" height="73"/><rect x="826" y="219" width="218" height="73"/></g>
-<g fill="#f3efe5" font-family="Arial, Helvetica, sans-serif"><text x="63" y="160" font-size="24" font-weight="700">SUPERVISOR</text><text x="63" y="186" font-size="13">astra · low</text><text x="63" y="239" font-size="13">owns final decision</text><text x="439" y="126" font-size="19" font-weight="700">DELEGATE</text><text x="439" y="148" font-size="12">sol · medium · depth 1</text><text x="439" y="250" font-size="19" font-weight="700">KANBAN BOARD</text><text x="439" y="275" font-size="12">durable tasks · explicit assignee</text><text x="845" y="126" font-size="19" font-weight="700">RETURN</text><text x="845" y="148" font-size="12">short-lived result</text><text x="845" y="250" font-size="19" font-weight="700">GATEWAY</text><text x="845" y="275" font-size="12">dispatcher → named profile</text></g>
-<g stroke="#ed6833" stroke-width="3" fill="none"><path d="M274 148H407"/><path d="M274 247H407"/><path d="M675 130H813"/><path d="M675 255H813"/></g>
-<g fill="#ed6833"><path d="m407 148-12-7v14zM407 247l-12-7v14zM813 130l-12-7v14zM813 255l-12-7v14z"/></g>
-<g font-family="Arial, Helvetica, sans-serif" fill="#171819" font-size="11" letter-spacing="1"><text x="290" y="134">FORK / JOIN</text><text x="290" y="232">HANDOFF</text><text x="704" y="116">RESULT</text><text x="706" y="240">DISPATCH</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+<title id="title">Hermes Orchestration — three distinct lanes</title><desc id="desc">A supervisor sends short-lived work to delegates and gets results back. Durable work moves through Kanban and gateway to the named solver profile. Luna auxiliary services occupy a separate side lane.</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#e76c37"/></marker></defs>
+<rect width="1200" height="650" fill="#f2efe7"/>
+<rect x="24" y="24" width="1152" height="602" fill="none" stroke="#b7b3a9"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#182024"><text x="48" y="65" font-size="23" font-weight="700" letter-spacing="1.5">WORK HAS TWO CLOCKS</text><text x="48" y="89" font-size="13" letter-spacing="1.3">ONE SUPERVISOR  /  EXPLICIT ROUTING  /  VERIFIED RETURN</text></g>
+<path d="M48 106H1152M48 487H1152M48 609H1152" stroke="#c6c0b5" fill="none"/>
+<g font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="12" letter-spacing="1.5" fill="#a84525"><text x="48" y="138">01  SHORT-LIVED / FORK–JOIN</text><text x="48" y="318">02  DURABLE / NAMED ASSIGNEE</text><text x="48" y="517">03  AUXILIARY / SERVICE LANE</text></g>
+<g fill="#172125"><rect x="48" y="159" width="285" height="122" rx="4"/><rect x="439" y="159" width="287" height="122" rx="4"/><rect x="836" y="159" width="316" height="122" rx="4"/>
+<rect x="48" y="338" width="285" height="122" rx="4"/><rect x="439" y="338" width="287" height="122" rx="4"/><rect x="836" y="338" width="316" height="122" rx="4"/></g>
+<g fill="#f2efe7" font-family="Arial, Helvetica, sans-serif"><text x="68" y="194" font-size="22" font-weight="700">SUPERVISOR</text><text x="68" y="219" font-size="14">Astra · low reasoning</text><text x="68" y="258" font-size="13">owns decision &amp; verification</text>
+<text x="459" y="194" font-size="22" font-weight="700">DELEGATE</text><text x="459" y="219" font-size="14">Sol · medium · depth 1</text><text x="459" y="258" font-size="13">bounded task, up to 3 at once</text>
+<text x="856" y="194" font-size="22" font-weight="700">RESULT</text><text x="856" y="219" font-size="14">short-lived return</text><text x="856" y="258" font-size="13">supervisor reviews outcome</text>
+<text x="68" y="373" font-size="22" font-weight="700">KANBAN</text><text x="68" y="398" font-size="14">persistent task board</text><text x="68" y="437" font-size="13">explicit assignee: solver</text>
+<text x="459" y="373" font-size="22" font-weight="700">GATEWAY</text><text x="459" y="398" font-size="14">dispatcher</text><text x="459" y="437" font-size="13">picks ready cards</text>
+<text x="856" y="373" font-size="22" font-weight="700">SOLVER PROFILE</text><text x="856" y="398" font-size="14">Sol · high reasoning</text><text x="856" y="437" font-size="13">separate named worker</text></g>
+<g stroke="#e76c37" stroke-width="3" fill="none" marker-end="url(#arrow)"><path d="M342 220H421"/><path d="M735 220H819"/><path d="M342 399H421"/><path d="M735 399H819"/></g>
+<g fill="#a84525" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1"><text x="352" y="206">FORK</text><text x="747" y="206">JOIN</text><text x="345" y="386">QUEUE</text><text x="746" y="386">ROUTE</text></g>
+<rect x="48" y="531" width="1104" height="58" rx="4" fill="#d8e2df" stroke="#829b97"/>
+<rect x="48" y="531" width="8" height="58" fill="#357d78"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#183b3b"><text x="74" y="556" font-size="18" font-weight="700">LUNA / LOW</text><text x="74" y="577" font-size="13">Vision · compression · skills · approvals · MCP · titles · triage · decomposition · profiles · curator</text></g>
+<text x="48" y="633" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1.2" fill="#5b6667">AUXILIARY IS NOT THE SUPERVISOR     /     KANBAN DOES NOT AUTO-ROUTE TO SOLVER</text>
 </svg>
